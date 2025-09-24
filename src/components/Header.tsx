@@ -2,9 +2,11 @@
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import { useClickTracking } from '@/hooks/useAnalytics';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { trackLinkClick, trackButtonClick } = useClickTracking();
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);

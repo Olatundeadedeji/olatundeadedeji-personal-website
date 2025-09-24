@@ -4,6 +4,8 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollProgress from "@/components/ScrollProgress";
+import PlausibleAnalytics from "@/components/PlausibleAnalytics";
+import CookieConsent from "@/components/CookieConsent";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -54,6 +56,18 @@ export default function RootLayout({
         </main>
 
         <Footer />
+
+        {/* Analytics */}
+        <PlausibleAnalytics
+          domain={process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN || 'olatundeadedeji.com'}
+          trackLocalhost={process.env.NEXT_PUBLIC_TRACK_LOCALHOST === 'true'}
+          enableAutoPageviews={process.env.NEXT_PUBLIC_ENABLE_AUTO_PAGEVIEWS !== 'false'}
+          enableOutboundLinks={process.env.NEXT_PUBLIC_ENABLE_OUTBOUND_LINKS !== 'false'}
+          enableFileDownloads={process.env.NEXT_PUBLIC_ENABLE_FILE_DOWNLOADS !== 'false'}
+        />
+
+        {/* Privacy-compliant consent banner */}
+        <CookieConsent />
       </body>
     </html>
   );
