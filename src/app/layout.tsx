@@ -14,7 +14,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Olatunde Adedeji — Software Engineer & AI Applications Developer",
-  description: "Portfolio of a Software Engineer & AI Applications Developer with 10+ years of experience.",
+  description: "Software Engineer & AI Applications Developer with 10+ years of experience in web and mobile applications engineering.",
 };
 
 export default function RootLayout({

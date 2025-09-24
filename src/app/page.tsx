@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
+import { HeroProfileImage } from "@/components/ProfileImage";
 
 export default function Home() {
   return (
@@ -41,15 +42,18 @@ export default function Home() {
                 <ScrollReveal>
                   <div className="card p-3">
                     <dt className="text-xs text-slate-500">Books</dt>
-                    <dd className="text-lg font-semibold">5+</dd>
+                    <dd className="text-lg font-semibold">3+</dd>
                   </div>
                 </ScrollReveal>
               </dl>
             </div>
             <ScrollReveal>
               <figure className="relative">
-                <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop" alt="Laptop with code editor and accessibility-friendly workspace" className="w-full h-72 sm:h-96 object-cover rounded-2xl shadow-soft" />
-                <figcaption className="sr-only">Work setup showing code editor and keyboard</figcaption>
+                <HeroProfileImage
+                  src="/olatunde-adedeji.png"
+                  alt="Olatunde Adedeji, Software Engineer and AI Applications Developer"
+                />
+                <figcaption className="sr-only">Professional headshot of Olatunde Adedeji in his development workspace</figcaption>
                 {/* Shimmer badge */}
                 <div aria-hidden="true" className="absolute -bottom-4 left-6 px-4 py-2 rounded-xl bg-white/80 dark:bg-slate-900/70 border border-slate-200/70 dark:border-slate-800/70 backdrop-blur shadow-soft">
                   <div className="text-xs text-slate-600 dark:text-slate-300 bg-gradient-to-r from-slate-200 via-white to-slate-200 bg-[length:200%_100%] animate-shimmer bg-clip-text text-transparent font-semibold">Inclusive • Performant • Reliable</div>
@@ -297,3 +301,4 @@ export default function Home() {
     </>
   );
 }
+
