@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
 import { HeroProfileImage } from "@/components/ProfileImage";
@@ -7,17 +8,19 @@ export default function Home() {
     <>
       {/* Hero */}
       <section id="home" className="relative">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-8 sm:py-10 lg:py-12">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             <div>
               <ScrollReveal>
                 <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight">
-                  Software Engineer & <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand to-accent">AI Applications</span> Developer
+                  Full-Stack AI Engineer, Technical Author & <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand to-accent">MLOPs Specialist</span> 
                 </h1>
               </ScrollReveal>
               <ScrollReveal>
-                <p className="mt-5 text-base sm:text-lg text-slate-700 dark:text-slate-300 max-w-xl">
-                  I craft accessible, performant AI products for the web and cloud. 10+ years across Django, React, vector databases, and MLOps.
+                <p className="mt-5 text-sm sm:text-sm  text-slate-700 dark:text-slate-300 max-w-xl">
+                  Expert in Generative AI, Retrieval-Augmented Generation (RAG) applications, vector databases, and end-to-end ML pipelines. Proven ability to design and scale intelligent systems from concept to production across OCI, Azure, and AWS. 
+                  Backed by over a decade of full-stack engineering experience.
+                  Bridge cutting-edge AI innovation with robust, production-ready architectures.
                 </p>
               </ScrollReveal>
               <ScrollReveal>
@@ -27,12 +30,7 @@ export default function Home() {
                 </div>
               </ScrollReveal>
               <dl className="mt-8 grid grid-cols-3 gap-4 max-w-md text-center">
-                <ScrollReveal>
-                  <div className="card p-3">
-                    <dt className="text-xs text-slate-500">Experience</dt>
-                    <dd className="text-lg font-semibold">10+ yrs</dd>
-                  </div>
-                </ScrollReveal>
+             
                 <ScrollReveal>
                   <div className="card p-3">
                     <dt className="text-xs text-slate-500">Projects</dt>
@@ -41,7 +39,7 @@ export default function Home() {
                 </ScrollReveal>
                 <ScrollReveal>
                   <div className="card p-3">
-                    <dt className="text-xs text-slate-500">Books</dt>
+                    <dt className="text-xs text-slate-500">Technical Books</dt>
                     <dd className="text-lg font-semibold">3+</dd>
                   </div>
                 </ScrollReveal>
@@ -56,7 +54,7 @@ export default function Home() {
                 <figcaption className="sr-only">Professional headshot of Olatunde Adedeji in his development workspace</figcaption>
                 {/* Shimmer badge */}
                 <div aria-hidden="true" className="absolute -bottom-4 left-6 px-4 py-2 rounded-xl bg-white/80 dark:bg-slate-900/70 border border-slate-200/70 dark:border-slate-800/70 backdrop-blur shadow-soft">
-                  <div className="text-xs text-slate-600 dark:text-slate-300 bg-gradient-to-r from-slate-200 via-white to-slate-200 bg-[length:200%_100%] animate-shimmer bg-clip-text text-transparent font-semibold">Inclusive • Performant • Reliable</div>
+                  <div className="text-xs font-semibold shimmer-text dark:shimmer-text-dark">Specializing in Gen AI, vector databases, and scalable architectures</div>
                 </div>
               </figure>
             </ScrollReveal>
@@ -65,34 +63,71 @@ export default function Home() {
       </section>
 
       {/* About */}
-      <section id="about" aria-labelledby="about-title" className="bg-white/70 dark:bg-slate-900/30">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
+      <section id="about" aria-labelledby="about-title" className="bg-white/50 dark:bg-slate-900/30">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-8">
           <ScrollReveal>
-            <h2 id="about-title" className="text-3xl font-bold">About</h2>
+            <h2 id="about-title" className="text-2xl sm:text-3xl font-bold">About</h2>
           </ScrollReveal>
-          <ScrollReveal>
-            <p className="mt-4 max-w-3xl text-slate-700 dark:text-slate-300">
-              I specialize in AI-assisted applications, Retrieval-Augmented Generation, and event-driven architectures.
-              My work emphasizes performance, observability, and inclusive design so every user can succeed.
-            </p>
-          </ScrollReveal>
+          <div className="mt-4 max-w-5xl space-y-4">
+            <ScrollReveal>
+              <p className=" text-sm text-slate-700 dark:text-slate-300  text-justify">
+                Specializing in AI-assisted applications, Retrieval-Augmented Generation (RAG) systems, and event-driven architectures that scale reliably in production. Expertise spans vector databases, machine learning pipelines, and multi-cloud platforms (OCI, Azure, AWS) to deliver intelligent solutions that balance performance, resilience, and cost efficiency.
+                 Proven track record in developing web and mobile applications tailored to the needs of business organizations, enabling seamless integration of AI into everyday operations.     
+                 Emphasis on observability and responsible AI practices ensures that systems are transparent, measurable, and adaptable in real-world settings.
+          Commitment to inclusive design principles guarantees that technologies remain accessible and effective for every user, regardless of background or ability.
+              </p>
+            </ScrollReveal>
+          </div>
           <ul className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-5" role="list">
             <ScrollReveal>
               <li className="card p-5">
-                <h3 className="font-semibold text-lg">Core Stack</h3>
-                <p className="text-sm text-slate-600 dark:text-slate-400 mt-2">Python/Django • React/Next • Node • Postgres • Redis • Kubernetes</p>
+                <h3 className="font-semibold text-lg mb-3">Core Stack</h3>
+                <div className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                  <div>
+                    <span className="font-medium text-slate-700 dark:text-slate-300">Backend:</span> Python (Django, FastAPI), Node.js (Express, Nest), REST/GraphQL APIs
+                  </div>
+                  <div>
+                    <span className="font-medium text-slate-700 dark:text-slate-300">Frontend:</span> React, Next.js, Vue, TypeScript, Tailwind CSS
+                  </div>
+                  <div>
+                    <span className="font-medium text-slate-700 dark:text-slate-300">Databases:</span> PostgreSQL, MongoDB, Redis, S3-compatible storage
+                  </div>
+                 
+                </div>
               </li>
             </ScrollReveal>
             <ScrollReveal>
               <li className="card p-5">
-                <h3 className="font-semibold text-lg">AI Focus</h3>
-                <p className="text-sm text-slate-600 dark:text-slate-400 mt-2">RAG • Vector DBs • Agents • Observability • Guardrails • A11y</p>
+                <h3 className="font-semibold text-lg mb-3">AI Focus</h3>
+                <div className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                  <div>
+                    <span className="font-medium text-slate-700 dark:text-slate-300">LLM Applications:</span> Retrieval-Augmented Generation (RAG), intelligent agents, chat with documents
+                  </div>
+                  <div>
+                    <span className="font-medium text-slate-700 dark:text-slate-300">Data & Search:</span> Vector databases (Pinecone, pgvector), embeddings optimization
+                  </div>
+                  <div>
+                    <span className="font-medium text-slate-700 dark:text-slate-300">System Design:</span> Event-driven pipelines, scalable ML workflows, guardrails for safe AI use
+                  </div>
+                  
+                </div>
               </li>
             </ScrollReveal>
             <ScrollReveal>
               <li className="card p-5">
-                <h3 className="font-semibold text-lg">Values</h3>
-                <p className="text-sm text-slate-600 dark:text-slate-400 mt-2">Accessibility • Reliability • Documentation • Testing • DX</p>
+                <h3 className="font-semibold text-lg mb-3">Values</h3>
+                <div className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                  <div>
+                    <span className="font-medium text-slate-700 dark:text-slate-300">Accessibility (A11y):</span> Designing products usable by all, with WCAG-compliant interfaces
+                  </div>
+                  <div>
+                    <span className="font-medium text-slate-700 dark:text-slate-300">Reliability:</span> Architecting resilient, fault-tolerant systems with strong uptime SLAs
+                  </div>
+                  <div>
+                    <span className="font-medium text-slate-700 dark:text-slate-300">Documentation:</span> Clear, living docs for teams, clients, and open-source communities
+                  </div>
+                
+                </div>
               </li>
             </ScrollReveal>
           </ul>
@@ -101,9 +136,9 @@ export default function Home() {
 
       {/* Services */}
       <section id="services" aria-labelledby="services-title">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-8">
           <ScrollReveal>
-            <h2 id="services-title" className="text-3xl font-bold">Services</h2>
+            <h2 id="services-title" className="text-2xl sm:text-3xl font-bold">Services</h2>
           </ScrollReveal>
           <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <ScrollReveal>
@@ -133,9 +168,9 @@ export default function Home() {
 
       {/* Books */}
       <section id="books" aria-labelledby="books-title" className="bg-white/70 dark:bg-slate-900/30">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-8">
           <ScrollReveal>
-            <h2 id="books-title" className="text-3xl font-bold">Books</h2>
+            <h2 id="books-title" className="text-2xl sm:text-3xl font-bold">Books</h2>
           </ScrollReveal>
           <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <ScrollReveal>
@@ -174,9 +209,9 @@ export default function Home() {
 
       {/* Blog */}
       <section id="blog" aria-labelledby="blog-title">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-8">
           <ScrollReveal>
-            <h2 id="blog-title" className="text-3xl font-bold">Blog</h2>
+            <h2 id="blog-title" className="text-2xl sm:text-3xl font-bold">Blog</h2>
           </ScrollReveal>
           <ul className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6" role="list">
             <ScrollReveal>
@@ -212,9 +247,9 @@ export default function Home() {
 
       {/* Projects */}
       <section id="projects" aria-labelledby="projects-title" className="bg-white/70 dark:bg-slate-900/30">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-8">
           <ScrollReveal>
-            <h2 id="projects-title" className="text-3xl font-bold">Projects</h2>
+            <h2 id="projects-title" className="text-2xl sm:text-3xl font-bold">Projects</h2>
           </ScrollReveal>
           <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <ScrollReveal>
@@ -256,9 +291,9 @@ export default function Home() {
 
       {/* Contact */}
       <section id="contact" aria-labelledby="contact-title">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-8">
           <ScrollReveal>
-            <h2 id="contact-title" className="text-3xl font-bold">Contact</h2>
+            <h2 id="contact-title" className="text-2xl sm:text-3xl font-bold">Contact</h2>
           </ScrollReveal>
           <ScrollReveal>
             <p className="mt-2 text-slate-700 dark:text-slate-300">Have a project in mind? Send a message.</p>
@@ -301,4 +336,6 @@ export default function Home() {
     </>
   );
 }
+
+
 
