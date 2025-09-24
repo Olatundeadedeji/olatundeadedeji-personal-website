@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+  :root {
+    color-scheme: light dark;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-medium transition focus:outline-none focus-visible:ring-2 focus-visible:ring-accent;
+  }
+  .btn-primary {
+    @apply btn bg-brand text-white hover:bg-brand-700;
+  }
+  .btn-ghost {
+    @apply btn border border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-900;
+  }
+  .card {
+    @apply rounded-2xl border border-slate-200/80 dark:border-slate-800/80 bg-white/70 dark:bg-slate-900/50 backdrop-blur shadow-soft transition;
+  }
+  .link-underline {
+    @apply relative inline-block;
+  }
+  .link-underline::after {
+    content: '';
+    @apply absolute left-0 bottom-0 h-0.5 w-0 bg-brand;
+    transition: width 0.25s ease;
+  }
+  .link-underline:where(:hover, :focus-visible)::after {
+    width: 100%;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
